@@ -1797,6 +1797,7 @@ Received outputs:
             )
 
             if self.enable_queue:
+                print(f"launch enable_queue {app_url}")
                 self._queue.set_url(self.local_url)
 
             # Cannot run async functions in background other than app's scope.

@@ -329,6 +329,8 @@ class Queue:
                 if event.data
             ]
             data.batched = True
+        print(f"call_prediction self.server_path {self.server_path}")
+        print(f"call_prediction self.access_token {self.access_token}")
         response = await AsyncRequest(
             method=AsyncRequest.Method.POST,
             url=f"{self.server_path}api/predict",

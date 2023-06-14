@@ -531,6 +531,7 @@ class App(FastAPI):
                 return
             if blocks._queue.server_path is None:
                 app_url = get_server_url_from_ws_url(str(websocket.url))
+                print(f"join_queue app_url {app_url}")
                 blocks._queue.set_url(app_url)
             await websocket.accept()
             # In order to cancel jobs, we need the session_hash and fn_index
